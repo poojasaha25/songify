@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<ul>
+     <li id='first'></li>
+     <li id='second'></li>
+     <li id='third'></li>
+     <li id='fourth'></li>
+</ul>
+<audio></audio>
+<script src="jquery-2.2.0.js"></script>
+<script>
+	var songlist=['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];
+	window.onload=function(){
+	$('#first').text(songlist[0]);
+	$('#second').text(songlist[1]);
+	$('#third').text(songlist[2]);
+	$('#fourth').text(songlist[3]);	
+}   
+
+function toggleSong(){
+	if($('audio')[0].paused==true){       
+		$('audio')[0].play();               
+	}   
+	else {                                     
+		$('audio')[0].pause();
+	}
+}
+
+
+$('#first').on('click',function(){
+	document.querySelector('audio').src=songlist[0];
+     toggleSong();
+});
+$('#second').on('click',function(){
+	document.querySelector('audio').src=songlist[1];
+    toggleSong();
+});
+$('#third').on('click',function(){
+	document.querySelector('audio').src=songlist[2];
+	toggleSong();
+});
+$('#fourth').on('click',function(){
+	document.querySelector('audio').src=songlist[3];
+	toggleSong();
+});  
+ 
+</script>
+</body>
+</html>
+

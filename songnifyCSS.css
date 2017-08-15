@@ -1,0 +1,16 @@
+<style type="text/css">
+			#divWelcome {
+				text-align: center;
+				margin: auto;
+			}
+			#divDisplay {
+				background-color:rgba(0,0,0,0.1);
+			}
+			tr td{
+				color:rgba(100,0,100,1);
+			}
+			#coloumn-name td{
+				font-style:bold;
+				color: red;
+			}
+</style>

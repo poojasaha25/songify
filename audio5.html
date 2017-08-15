@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<ul>
+     <li id='first'></li>
+     <li id='second'></li>
+     <li id='third'></li>
+     <li id='fourth'></li>
+</ul>
+<audio></audio>
+<script src="jquery-2.2.0.js"></script>
+<script>
+    var songname=['song1','song2','song3','song4'];
+	var songfile=['song1.mp3','song2.mp3','song3.mp3','song4.mp3'];
+	window.onload=function(){
+	$('#first').text(songname[0]);
+	$('#second').text(songname[1]);
+	$('#third').text(songname[2]);
+	$('#fourth').text(songname[3]);	
+}   
+
+function toggleSong(){
+	var song=document.querySelector('audio');
+	if(song.paused){       
+		song.play();               
+	}   
+	else {                                     
+		song.pause();
+	}
+}
+
+
+$('#first').on('click',function(){
+	var song=document.querySelector('audio');
+	var currentSong=song.src;
+    if (currentSong.search(songfile[0])!= -1){
+    	toggleSong();
+    }
+    else {
+    	song.src=songfile[0];
+    	song.play();
+    }
+});
+$('#second').on('click',function(){
+	var song=document.querySelector('audio');
+	var currentSong=song.src;
+    if (currentSong.search(songfile[1])!= -1){
+    	toggleSong();
+    }
+    else {
+    	song.src=songfile[1];
+    	song.play();
+    }
+});
+$('#third').on('click',function(){
+	var song=document.querySelector('audio');
+	var currentSong=song.src;
+    if (currentSong.search(songfile[2])!= -1){
+    	toggleSong();
+    }
+    else {
+    	song.src=songfile[2];
+    	song.play();
+    }
+});
+$('#fourth').on('click',function(){
+	var song=document.querySelector('audio');
+	var currentSong=song.src;
+    if (currentSong.search(songfile[3])!= -1){
+    	toggleSong();
+    }
+    else {
+    	song.src=songfile[3];
+    	song.play();
+    }
+});
+</script>
+</body>
+</html>

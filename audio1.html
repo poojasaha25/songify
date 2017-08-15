@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<audio src="Meri_Maa.mp3" class="my-audio"></audio>
+<i class="fa fa-pause"></i>
+<p class="duration"></p>
+<p class="current-time"></p>
+<button class="duration-button">Show Duration</button>
+<button class="current-time-button">Show Current Time</button>
+<script type="text/javascript" src="jquery-2.2.0.js"></script>
+<script>
+    var song = $('.my-audio')[0];
+        if (song.paused == true) {
+            console.log('Playing');
+            $('.play-icon').removeClass('fa-play').addClass('fa-pause');
+            song.play();
+        } else {
+            console.log('Pausing');
+            $('.play-icon').removeClass('fa-pause').addClass('fa-play');
+            song.pause();
+        } 
+	$('.duration-button').on('click',function(){
+       $('.duration').text(song.duration);
+   });
+    $('.current-time-button').on('click',function(){
+       $('.current-time').text(song.currentTime);
+	});
+	
+</script>
+</body>
+</html>

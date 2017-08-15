@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <link type="text/css" rel="stylesheet" href="font-awesome.css">
+		<style>
+			
+		</style>
+	</head>
+	<body>
+	    <script src="jquery-2.2.0.js"></script>
+		<audio src="song1.mp3" class="audio1" controls=""></audio>
+		<button type="button" class="btn1">Audio Button</button>
+		<script>
+			$('.btn1').on('click',function(){
+				/*
+				var song=$('.audio1');       
+				if(song[0].paused==true){                           
+					song[0].play();                                       
+				}                                                     
+				else {
+					song[0].pause();
+				}
+				*/
+				
+				/*
+				var song=$('.audio1')[0];
+				if(song.paused==true){                             if(song.paused==true){
+					song.play();                                       song.play();
+				}  
+				else {
+					song.pause();
+				}
+
+				*/
+				                                                   
+				if($('.audio1')[0].paused==true){        //check if song is paused or not
+					$('.audio1')[0].play();              //$('.abc') --> it is an array of all elements having class name abc 
+				}                                        //$('#abc') --> it is a single element having id abc
+				else {
+					$('.audio1')[0].pause();
+				}
+				
+
+
+			});
+		</script>
+	</body>
+</html>
